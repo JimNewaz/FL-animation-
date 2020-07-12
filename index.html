@@ -20,17 +20,29 @@
                         <div class="road"></div>   
                         <div class="city"></div>   
                         <div class="car">
-                            <img src="image/car1.png">
+                            <img src="image/car1.png " id="myImage" onclick="changeImage()">
                         </div>
                         <div class="wheel">
                             <img src="image/wheel.png" class="back-wheel">
                             <img src="image/wheel.png" class="front-wheel">
                         </div>
-                 </div>                                                 
+                        </div>                                                 
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <script>
+                function changeImage() {
+                  var image = document.getElementById("myImage");
+                  if (image.src.match("car2")) {
+                    image.src = "image/car1.png";
+                  } else if(image.src.match("car3")){
+                    image.src = "image/car2.png";
+                  }
+                  else{
+                    image.src = "image/car3.png";
+                  }
+                }
+            </script>
 </body>
 </html>
